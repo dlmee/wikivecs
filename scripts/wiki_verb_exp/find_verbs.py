@@ -16,6 +16,6 @@ def extract_progeny(input_path, output_path):
     print(f"Progeny list saved to {output_path}")
 
 if __name__ == "__main__":
-    input_path = '/home/ocelot/Code/odinson-llm/taxonomies/hyp_verbs_w_progeny.json'
-    output_path = 'verb_list.json'
+    input_path = 'data/verb_tree.json'
+    output_path = 'data/verb_list.json'
     extract_progeny(input_path, output_path)
