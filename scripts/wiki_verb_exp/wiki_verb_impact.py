@@ -8,7 +8,7 @@ from tqdm import tqdm
 from collections import defaultdict
 
 class WikipediaProcessor:
-    def __init__(self, dump_path, verb_list_path, output_dir='wiki_knowledge'):
+    def __init__(self, dump_path, verb_list_path, output_dir='data'):
         self.dump_path = dump_path
         self.output_dir = output_dir
         self.knowledge = defaultdict(int)
@@ -69,6 +69,7 @@ class WikipediaProcessor:
 
 if __name__ == "__main__":
     dump_path = 'enwiki-latest-pages-articles.xml'
-    verb_list_path = 'verb_list.json'
+    dump_path = 'enwiki-20240501-pages-articles15.xml-p17324603p17460152'
+    verb_list_path = 'data/verb_list.json'
     processor = WikipediaProcessor(dump_path, verb_list_path)
     processor.process()

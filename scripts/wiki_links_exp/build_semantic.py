@@ -34,8 +34,9 @@ def main(link_counts_path, processed_verbs_path, semantic_embeddings_path, proce
     processed_verbs = load_json(processed_verbs_path)
     
     # Filter links based on given conditions
-    filtered_links = filter_links(link_counts)
-    
+    #filtered_links = filter_links(link_counts)
+    filtered_links = link_counts
+
     # Build indices for verbs and links
     verb_index = build_index(processed_verbs)
     link_index = build_index(filtered_links)
@@ -52,9 +53,9 @@ def main(link_counts_path, processed_verbs_path, semantic_embeddings_path, proce
 
 # Example usage
 if __name__ == "__main__":
-    link_counts_path = 'wiki_knowledge/link_counts.json'  # Replace with your input JSON file path
-    processed_verbs_path = 'wiki_knowledge/processed_verbs.json'  # Replace with your input JSON file path
-    semantic_embeddings_path = 'wiki_knowledge/semantic_embeddings.json'  # Replace with your output JSON file path
-    processed_links_path = 'wiki_knowledge/processed_links.json'  # Replace with your output JSON file path
+    link_counts_path = 'data/link_impact_example.json'  # Replace with your input JSON file path
+    processed_verbs_path = 'data/verb_counts_0.json'  # Replace with your input JSON file path
+    semantic_embeddings_path = 'data/verb_embeddings.json'  # Replace with your output JSON file path
+    processed_links_path = 'data/link_embeddings.json'  # Replace with your output JSON file path
     
     main(link_counts_path, processed_verbs_path, semantic_embeddings_path, processed_links_path)
