@@ -152,10 +152,11 @@ def main(dump_path, verb_index_path, link_index_path, verb_link_output_path, sen
 
 # Real file paths
 if __name__ == "__main__":
-    dump_path = 'enwiki-latest-pages-articles.xml'  # Replace with your filtered input XML file path
-    verb_index_path = 'wiki_knowledge/embeddings/verb_embeddings.json'  # Replace with your processed verbs JSON file path
-    link_index_path = 'wiki_knowledge/embeddings/link_embeddings.json'  # Replace with your processed links JSON file path
-    verb_link_output_path = 'page_embeddings.jsonl'  # Replace with your output JSONL file path
-    sentences_output_path = 'intersected_sentences.jsonl'  # Replace with your output JSONL file path
+    dump_path = 'enwiki-latest-pages-articles.xml' 
+    dump_path = 'enwiki-20240501-pages-articles15.xml-p17324603p17460152'
+    verb_index_path = 'data/verb_embeddings.json'  
+    link_index_path = 'data/link_embeddings.json'  
+    verb_link_output_path = 'page_embeddings.jsonl'  
+    sentences_output_path = 'intersected_sentences.jsonl'  
     
-    main(dump_path, verb_index_path, link_index_path, verb_link_output_path, sentences_output_path, num_workers=10, batch_size=1000, resume=8308044)
+    main(dump_path, verb_index_path, link_index_path, verb_link_output_path, sentences_output_path, num_workers=5, batch_size=100)
