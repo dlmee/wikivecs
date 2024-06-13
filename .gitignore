@@ -1,2 +1,7 @@
 data/
 wvenv/
+database/
+enwiki-20240501-abstract.xml
+enwiki-20240501-all-titles
+enwiki-20240501-pages-articles15.xml-p17324603p17460152
+final_embedding.db
